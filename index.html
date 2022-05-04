@@ -76,6 +76,11 @@ li{
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
+var OSMRoads = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 22,
+  maxNativeZoom: 19
+}).addTo(mymap);
+
     // Map Markers
    var markerhstat = new L.marker([ 40.6366386,-74.0229627]); // HSTAT marker
   
