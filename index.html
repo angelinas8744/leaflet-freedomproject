@@ -96,16 +96,19 @@ img {
    var markerhstat = new L.marker([ 40.6366386,-74.0229627]); // HSTAT marker
    var markerb4 = new L.marker([ 40.630641, -74.024689]); // B4 stop 75th and 4th
    var markerRtrain = new L.marker([ 40.6349359,-74.0234975]); // R train station
+   var markerb64 = new L.marker([40.63442411700877, -74.02321694161722]) // b64 stop
 //   var makerCustom = new L.marker([ xcoordnate,ycoordnate]);
    
    /// Adding the markers above to map.
    markerhstat.addTo(map);
    markerb4.addTo(map);
    markerRtrain.addTo(map);
+   markerb64.addTo(map);
 //   makerCustom.addTo(map);
    
    /// text for markers
    markerRtrain.bindTooltip("This is a R train station", { permanent: true, offset: [0, 12] });
+   markerb64.bindTooltip("This stop is for the b64. It goes from shore road to coney island, stillwell ave.", { permanent: true, offset: [0, 12] });
 </script>
 
 </body>
