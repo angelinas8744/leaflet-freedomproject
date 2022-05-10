@@ -105,6 +105,14 @@ img {
   markerb4.bindTooltip("This stop is for the b4. It goes from Narrows ave to Sheepshead Bay.", { permanent: true, offset: [0, 12] });
   markerhstat.bindTooltip("This is the High School Of Telecommunications Arts and Technology.", { permanent: true, offset: [0, 12] });
 
+// marker with CUSTOM icon.
+var myIcon = L.icon({
+    iconUrl: 'https://iconarchive.com/download/i57781/icons-land/vista-map-markers/Map-Marker-Ball-Pink.ico',
+    iconSize: [50,50], // icon size
+});
+
+var markerCinema= L.marker([40.633629330417484, -74.02056055800358], {icon: myIcon}).addTo(map);
+
 </script>
 
 </body>
