@@ -3,7 +3,7 @@
 <html>
 
 <head>
-<h1>Welcome to My Leaflet map. Move around by clicking and dragging. Zoom in by double clicking or using the provided zoom buttons. To reset, reload the page. You will find the map below this section.</h1>
+<h1>Welcome to My Leaflet map. Move around by clicking and dragging. Zoom in by double clicking or using the provided zoom buttons. Click the custom marker for a pop-up To reset, reload the page. You will find the map below this section.</h1>
 <p> Navigation can be tricky. Especally when maps are becoming high tech, and you start to memorize directions less, and have computers do it for you. Here, You can use a basic map to navigate around. Here are some tips for getting to know your routes. Like everything in life, it takes practice.</p>
 <li> Find the easiest and most effective route </li>
 <li> Review it, from start to end, back and forth until you have it down. </li>
@@ -12,10 +12,6 @@
 <li> Study street signs and see its patterns, such as which directions the numbers increase or decrease. </li>
 <li> Repeat this method with different Locations around !</li>
 <br>
-
-<p>Please put the X and Y cordnates below for a custom marker.</p>
-<form> <input type="text"> </form>
-<form> <input type="text"> </form>
 
 <img src="https://pngimg.com/uploads/compass/compass_PNG25581.png" class="middle" >
 
@@ -79,10 +75,6 @@ img {
 
 <script>
 
-    // Varibles for custom coordnates for the user's marker.
-    // var xcoordnate =;
-    // var ycoordnate =;
-
     var map = L.map('map',{
     center: [40.633415, -74.024030], // coordantes set to Bayridge.
     zoom: 16 // set zoom of map
@@ -97,7 +89,6 @@ img {
    var markerb4 = new L.marker([ 40.630641, -74.024689]).addTo(map); // B4 stop 75th and 4th
    var markerRtrain = new L.marker([ 40.6349359,-74.0234975]).addTo(map); // R train station
    var markerb64 = new L.marker([40.63442411700877, -74.02321694161722]).addTo(map); // b64 stop
-//   var makerCustom = new L.marker([ xcoordnate,ycoordnate]).addTo(map); // custom marker, doesnt work
    
   // text for markers
   markerRtrain.bindTooltip("This is a R train station", { permanent: true, offset: [0, 12] });
@@ -105,13 +96,16 @@ img {
   markerb4.bindTooltip("This stop is for the b4. It goes from Narrows ave to Sheepshead Bay.", { permanent: true, offset: [0, 12] });
   markerhstat.bindTooltip("This is the High School Of Telecommunications Arts and Technology.", { permanent: true, offset: [0, 12] });
 
-// marker with CUSTOM icon.
+    // marker with CUSTOM icon.
 var myIcon = L.icon({
-    iconUrl: 'https://iconarchive.com/download/i57781/icons-land/vista-map-markers/Map-Marker-Ball-Pink.ico',
+    iconUrl: 'https://iconarchive.com/download/i57781/icons-land/vista-map-markers/Map-Marker-Ball-Pink.ico', // link to the image
     iconSize: [50,50], // icon size
 });
 
-var markerCinema= L.marker([40.63363899903864, -74.02052703039406], {icon: myIcon}).addTo(map);
+    // An icon with a pop-up
+var markerCinema= L.marker([40.63363899903864, -74.02052703039406], // create a varible and name the coordnates.
+{icon: myIcon}).addTo(map) // add the custom marker image to leaflet
+ .bindPopup('This was built in 1921'); // creates a click to toggle text box.
 
 </script>
 
