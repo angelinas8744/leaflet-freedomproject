@@ -30,24 +30,24 @@
       crossorigin=""
     ></script>
 
-    <style>
+<style>
     
-    html, body, #map {
-        height: 100%;
-        width: 100%;
+  html, body, #map {
+    height: 100%;
+    width: 100%;
     }
     
-    body {
+  body {
     background-color: #DBF9FC;
     }
     
     h1{
-     color: #0099FF;
+    color: #0099FF;
     }
     
     p{
-     font-size: 100%;
-     color:#6a0dad;
+    font-size: 100%;
+    color:#6a0dad;
     }
     
     li{
@@ -91,22 +91,22 @@
    var markerRtrain = new L.marker([ 40.6349359,-74.0234975]).addTo(map); // R train station
    var markerb64 = new L.marker([40.63442411700877, -74.02321694161722]).addTo(map); // b64 stop
    
-  // text for markers
-  markerRtrain.bindTooltip("This is a R train station", { permanent: true, offset: [0, 12] });
-  markerb64.bindTooltip("This stop is for the b64. It goes from shore road to coney island, stillwell ave.", { permanent: true, offset: [0, 12] });
-  markerb4.bindTooltip("This stop is for the b4. It goes from Narrows ave to Sheepshead Bay.", { permanent: true, offset: [0, 12] });
-  markerhstat.bindTooltip("This is the High School Of Telecommunications Arts and Technology.", { permanent: true, offset: [0, 12] });
+   // text for markers
+   markerRtrain.bindTooltip("This is a R train station", { permanent: true, offset: [0, 12] });
+   markerb64.bindTooltip("This stop is for the b64. It goes from shore road to coney island, stillwell ave.", { permanent: true, offset: [0, 12] });
+   markerb4.bindTooltip("This stop is for the b4. It goes from Narrows ave to Sheepshead Bay.", { permanent: true, offset: [0, 12] });
+   markerhstat.bindTooltip("This is the High School Of Telecommunications Arts and Technology.", { permanent: true, offset: [0, 12] });
 
     // marker with CUSTOM icon.
-var myIcon = L.icon({
+    var myIcon = L.icon({
     iconUrl: 'https://iconarchive.com/download/i57781/icons-land/vista-map-markers/Map-Marker-Ball-Pink.ico', // link to the image
     iconSize: [50,50], // icon size
-});
+    });
 
     // An icon with a pop-up
-var markerCinema= L.marker([40.63363899903864, -74.02052703039406], // create a varible and name the coordnates.
-{icon: myIcon}).addTo(map) // add the custom marker image to leaflet
- .bindPopup('This was built in 1921'); // creates a click to toggle text box.
+    var markerCinema= L.marker([40.63363899903864, -74.02052703039406], // create a varible and name the coordnates.
+    {icon: myIcon}).addTo(map) // add the custom marker image to leaflet
+    .bindPopup('This was built in 1921'); // creates a click to toggle text box.
 
 </script>
 
